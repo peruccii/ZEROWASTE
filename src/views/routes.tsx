@@ -17,28 +17,28 @@ const Routess = () => {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Login />} />
+        <Route path='/ZEROWASTE' element={<Login />} />
 
-        <Route path='/zero-waste-front/home' element={
+        <Route path='/ZEROWASTE/home' element={
           //<ProtectedRoutes>
             <Home />
           //</ProtectedRoutes>
 
         } />
 
-        <Route path='/zero-waste-front/profile' element={
+        <Route path='/ZEROWASTE/profile' element={
           //<ProtectedRoutes>
             <Profile />
           //</ProtectedRoutes>
         }/>
 
-        <Route path='/zero-waste-front/cadastro' element={
+        <Route path='/ZEROWASTE/cadastro' element={
           //<ProtectedRoutes>
             <Cadastro />
           //</ProtectedRoutes>
         }/>
 
-        <Route path='/zero-waste-front/solicite' element={
+        <Route path='/ZEROWASTE/solicite' element={
           //<ProtectedRoutes>
             <Solicite/>
           //</ProtectedRoutes>
