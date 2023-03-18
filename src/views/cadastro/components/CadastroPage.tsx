@@ -184,7 +184,7 @@ const CadastroPage = () => {
                 </div>
                 <div className="form-box">
                     <h2>Cadastrar um novo endereço</h2>
-                    <p> Cadastre um ponto de entrega</p>
+                    <p> Cadastre um ponto de entrega.</p>
                     <form onSubmit={handleSubmit(onsubmit)} action="#" className='form-endereco'>
                         <div className="input-group">
                             <input  {...register("cep")} onChange={checkCEP} maxLength={8} /*onChange={handleChangeCep} value={cep}*/ type="text" id="cep" placeholder="CEP" />

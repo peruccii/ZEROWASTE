@@ -13,17 +13,17 @@ const MenuLateral = () => {
         {
             text: "Home",
             icon: <FontAwesomeIcon className='icon' icon={faHouseUser} />,
-            href: '/home'
+            href: '/ZEROWASTE/home'
         },
         {
             text: "Solicite uma coleta",
             icon: <FontAwesomeIcon className='icon' icon={faStreetView} />,
-            href: '/solicite'
+            href: '/ZEROWASTE/solicite'
         },
         {
             text: "Cadastre um ponto de entrega",
             icon: <FontAwesomeIcon className='icon' icon={faMapLocationDot} />,
-            href: '/cadastro'
+            href: '/ZEROWASTE/cadastro'
         },
         {
             text: "Mapa de catadores proximos",
