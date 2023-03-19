@@ -1,6 +1,6 @@
-.home-section {
+.home-section-home {
   position: relative;
-  background: #ffff;
+ 
   min-height: 100vh;
   top: 0;
   transition: all 0.5s ease;
@@ -8,6 +8,32 @@
 
 }
 
+#light {
+  background-color: #f3ebf6;
+  transition: 0.4s ease-in-out
+}
+
+#dark {
+  background-color: #2D2E37;
+  transition: 0.4s ease-in-out
+}
+
+.switch {
+  width: 30%;
+  display: flex;
+  gap: 20px;
+  align-item: center;
+  transform: translatey(270px)
+}
+
+.labeltheme {
+  font-weight: bold;
+  color: #fff;
+}
+
+#light .labeltheme {
+  color: #000
+}
 
 
 .seção {
@@ -21,16 +47,16 @@
   align-items: center;
   background: linear-gradient();
   overflow: hidden;
-
+  
 }
 
 .seção .circlee {
   position: absolute;
   bottom: -20px;
   right: 0;
-  width: 50%;
-  height: 90.7%;
-  background: url(../../../assets/circle.png);
+  width: 80%;
+  height: 120.7%;
+  background: url(../../../assets/aaaa.png);
   background-size: cover;
   background-repeat: no-repeat;
   clip-path: circle(200 at right 200px);
@@ -43,6 +69,10 @@
   color: green;
   font-size: 3rem;
   transition: all ease-in-out .5s;
+}
+
+#dark .zerowastetext {
+  color: #24E973
 }
 
 .zerowastetext:hover {
@@ -78,11 +108,18 @@
 
 }
 
+#dark .content .textBox h2 {
+  color: #fff;
+}
+
 .content .textBox p {
   color: #000000;
   width: 82%;
 }
 
+#dark .content .textBox p {
+color: #f3ebf6;
+}
 .content .textBox a {
   display: inline-block;
   margin-top: 20px;
