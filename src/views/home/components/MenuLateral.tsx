@@ -14,32 +14,32 @@ const MenuLateral = () => {
         {
             text: "Home",
             icon: <FontAwesomeIcon className='icon' icon={faHouseUser} />,
-            href: '/#/home'
+            href: '/home'
         },
         {
             text: "Solicite uma coleta",
             icon: <FontAwesomeIcon className='icon' icon={faStreetView} />,
-            href: '/#/solicite'
+            href: '/solicite'
         },
         {
             text: "Cadastre um ponto de entrega",
             icon: <FontAwesomeIcon className='icon' icon={faMapLocationDot} />,
-            href: '/#/cadastro'
+            href: '/cadastro'
         },
         {
             text: "Mapa de catadores proximos",
             icon: <FontAwesomeIcon className='icon' icon={faMapPin} />,
-            href: '/#'
+            href: '/'
         },
         {
             text: "Pontuação",
             icon: <FontAwesomeIcon className='icon' icon={faTicket} />,
-            href: '/#'
+            href: '/'
         },
         {
             text: "Dicas",
             icon: <FontAwesomeIcon className='icon' icon={faBook} />,
-            href: '/#'
+            href: '/'
         }
 
 
@@ -75,9 +75,10 @@ const MenuLateral = () => {
                     {menuItems.map(({ text, icon, href }) => (
                         <a
                             className={isExpanded ? "menu-item" : "menu-item menu-item-NX"}
-                            href="#"
                             key={text}
-                            onClick={() => navigate(href)}
+                            onClick={() => {
+                                navigate(href, { replace: true })
+                            }}
                         >
                             {icon}
                             {isExpanded && <p>{text}</p>}
@@ -88,7 +89,7 @@ const MenuLateral = () => {
             </div>
             <div className="nav-footer">
                 {isExpanded && (
-                    <div className="nav-details" onClick={() => navigate('/profile')}>
+                    <div className="nav-details" onClick={() => navigate('/profile', { replace: true })}>
                         <img
                             className="nav-footer-avatar"
                             src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
@@ -105,7 +106,7 @@ const MenuLateral = () => {
                     localStorage.removeItem('token')
                     localStorage.removeItem('nome')
                     localStorage.removeItem('tipo')
-                    navigate('/')
+                    navigate('/', { replace: true })
                 }} className='logout-icon' icon={faRightFromBracket} />
             </div>
         </div>
