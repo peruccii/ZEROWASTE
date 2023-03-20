@@ -3,12 +3,11 @@ import React from 'react'
 
 import Login from './login/Login'
 
-import { BrowserRouter as Router, Routes, Route, HashRouter } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './home/Home'
 
 //import ProtectedRoutes from './ProtectedRoutes'
 import Profile from './profile/Profile'
-import CadastroPage from './cadastro/components/CadastroPage'
 import Cadastro from './cadastro/Cadastro'
 import Solicite from './solicite/Solicite'
 
@@ -18,34 +17,34 @@ const Routess = () => {
 
     <Router>
       <Routes>
-        <Route path='/'  element={<Login />} />
+        <Route path='/' element={<Login />} />
 
-        <Route path='/ZEROWASTE/home' element={
+        <Route path='/home' element={
           //<ProtectedRoutes>
-            <Home />
+          <Home />
           //</ProtectedRoutes>
 
         } />
 
-        <Route path='/ZEROWASTE/profile' element={
+        <Route path='/profile' element={
           //<ProtectedRoutes>
-            <Profile />
+          <Profile />
           //</ProtectedRoutes>
-        }/>
-        
-        <Route path='/ZEROWASTE/cadastro' element={
-          //<ProtectedRoutes>
-            <Cadastro />
-          //</ProtectedRoutes>
-        }/>
+        } />
 
-        <Route path='/ZEROWASTE/solicite' element={
+        <Route path='/cadastro' element={
           //<ProtectedRoutes>
-            <Solicite/>
+          <Cadastro />
           //</ProtectedRoutes>
-        }/>
+        } />
 
-        
+        <Route path='/solicite' element={
+          //<ProtectedRoutes>
+          <Solicite />
+          //</ProtectedRoutes>
+        } />
+
+
       </Routes>
     </Router>
 

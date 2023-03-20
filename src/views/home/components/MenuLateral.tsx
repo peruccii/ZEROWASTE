@@ -14,32 +14,32 @@ const MenuLateral = () => {
         {
             text: "Home",
             icon: <FontAwesomeIcon className='icon' icon={faHouseUser} />,
-            href: '/ZEROWASTE/home'
+            href: '/#/home'
         },
         {
             text: "Solicite uma coleta",
             icon: <FontAwesomeIcon className='icon' icon={faStreetView} />,
-            href: '/ZEROWASTE/solicite'
+            href: '/#/solicite'
         },
         {
             text: "Cadastre um ponto de entrega",
             icon: <FontAwesomeIcon className='icon' icon={faMapLocationDot} />,
-            href: '/ZEROWASTE/cadastro'
+            href: '/#/cadastro'
         },
         {
             text: "Mapa de catadores proximos",
             icon: <FontAwesomeIcon className='icon' icon={faMapPin} />,
-            href: '/'
+            href: '/#'
         },
         {
             text: "Pontuação",
             icon: <FontAwesomeIcon className='icon' icon={faTicket} />,
-            href: '/'
+            href: '/#'
         },
         {
             text: "Dicas",
             icon: <FontAwesomeIcon className='icon' icon={faBook} />,
-            href: '/'
+            href: '/#'
         }
 
 
