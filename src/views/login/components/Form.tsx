@@ -51,7 +51,7 @@ const form = () => {
       localStorage.setItem('nome', responde.user.pessoa_juridica.length > 0 ? responde.user.pessoa_juridica[0].nome_fantasia : responde.user.pessoa_fisica[0].nome)
       localStorage.setItem('tipo', responde.user.catador.length > 0 ? 'Catador' : 'Gerador')
       localStorage.setItem('id', responde.user.id)
-      navigate('/#/home')
+      navigate('/home', { replace: true })
     }
   }
 

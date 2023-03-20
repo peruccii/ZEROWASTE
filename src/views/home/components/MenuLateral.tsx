@@ -22,12 +22,12 @@ const MenuLateral = () => {
             href: '/solicite'
         },
         {
-            text: "Cadastre um ponto de entrega",
+            text: "Cadastre um endereço",
             icon: <FontAwesomeIcon className='icon' icon={faMapLocationDot} />,
             href: '/cadastro'
         },
         {
-            text: "Mapa de catadores proximos",
+            text: localStorage.getItem('tipo') == "Catador" ? 'Coletas' : "Mapa de catadores proximos",
             icon: <FontAwesomeIcon className='icon' icon={faMapPin} />,
             href: '/'
         },
@@ -109,7 +109,7 @@ const MenuLateral = () => {
                     navigate('/', { replace: true })
                 }} className='logout-icon' icon={faRightFromBracket} />
             </div>
-        </div>
+        </div >
     )
 }
 

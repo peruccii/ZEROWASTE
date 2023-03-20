@@ -76,36 +76,38 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
-        "header header"
         "userProfile userDetails"
         "work_skills timeline_about"
         "work_skills timeline_about";
     width: 85%;
-    height: 85vh;
-   grid-gap: 10px;
-    background: var(--glass-bg);
-    padding: var(--p-1-5);
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 25px rgba(0, 0, 0, 0.08);
+    height: 80vh;
+    grid-gap: 10px;
+    padding: 20px;
+    background: rgba(234, 255, 247, 0.23);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.23), 0 0 25px rgba(67, 67, 67, 0.08);
+    border-radius: 20px;
 }
 
 
-header {
-    grid-area: header;
-}
 
 .userProfile {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.486);
     grid-area: userProfile;
 }
 
 .work_skills {
+    background-color: rgba(255, 255, 255, 0.486);
     grid-area: work_skills;
 }
 
 .userDetails {
+    background-color: rgba(255, 255, 255, 0.486);
     grid-area: userDetails;
 }
 
 .timeline_about {
+    background-color: rgba(255, 255, 255, 0.486);
     grid-area: timeline_about;
 }
 
@@ -121,22 +123,25 @@ header {
     margin-left: var(--m-0-5);
 }
 
-figure img{
+figure img {
     border-radius: 50%;
 }
 
-.userProfile{
+.userProfile {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.userDetails, .work_skills, .timeline_about, .userProfile{
+.userDetails,
+.work_skills,
+.timeline_about,
+.userProfile {
     border-radius: 20px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.153);
 }
 
-.work_skills{
+.work_skills {
     padding: 20px;
 }
 
@@ -197,14 +202,14 @@ figure img{
 }
 
 .userDetails .rank span {
-    font-size: 3rem;
+    font-size: 4.5rem;
     font-weight: 700;
 }
 
 .userDetails .rank .rating {
     position: absolute;
-    top: 3.6rem;
-    left: 5.7rem;
+    top: 4.8rem;
+    left: 8rem;
 }
 
 .userDetails .rank .rating .rate {
@@ -236,23 +241,20 @@ figure img{
     font-size: var(--l-fs);
     color: #fff;
     font-weight: 400;
-    background: rgba(75, 155, 75, 0.712);
+    background: rgba(102, 163, 102, 0.433);
     padding: var(--p-0-5) var(--p-1-5);
-    border-radius: 15px;
-    outline: none;
+    border-radius: 30px;
+    border: 2px solid rgb(0, 86, 1);
+    transition: all ease-in-out .5s;
 }
 
 
 
 .userDetails .btns ul li a:hover {
-    font-size: var(--l-fs);
     color: #fff;
     font-weight: 450;
-    background: green;
-    padding: var(--p-0-5) var(--p-1-5);
-    border-radius: 15px;
-    transition: 0.4s ease-in-out;
-    outline: none;
+    background: rgb(51, 103, 51);
+    box-shadow: 34.495px 49.0927px 94px rgba(0, 0, 0, 0.14), 17.4631px 24.8532px 40.9781px rgba(0, 0, 0, 0.0945), 6.899px 9.81854px 15.275px rgba(0, 0, 0, 0.07), 1.50916px 2.14781px 5.43437px rgba(0, 0, 0, 0.0455);
 }
 
 
@@ -339,7 +341,7 @@ figure img{
     font-weight: 500;
     font-size: var(--m-fs);
     min-width: 12rem;
-    
+
 }
 
 .timeline_about .contact_info ul li span,
@@ -390,7 +392,7 @@ figure img{
         box-shadow: none;
     }
 
-    
+
 
 
     .container-bio .card {

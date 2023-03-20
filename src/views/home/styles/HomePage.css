@@ -1,6 +1,6 @@
 .home-section-home {
   position: relative;
- 
+
   min-height: 100vh;
   top: 0;
   transition: all 0.5s ease;
@@ -22,7 +22,7 @@
   width: 30%;
   display: flex;
   gap: 20px;
-  align-item: center;
+  align-items: center;
   transform: translatey(270px)
 }
 
@@ -47,7 +47,7 @@
   align-items: center;
   background: linear-gradient();
   overflow: hidden;
-  
+
 }
 
 .seção .circlee {
@@ -60,7 +60,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   clip-path: circle(200 at right 200px);
-
+  animation: scale 1.5s;
 
 }
 
@@ -118,8 +118,13 @@
 }
 
 #dark .content .textBox p {
-color: #f3ebf6;
+  color: #f3ebf6;
 }
+
+.content .textBox {
+  animation: opacity 2s;
+}
+
 .content .textBox a {
   display: inline-block;
   margin-top: 20px;
@@ -160,9 +165,39 @@ color: #f3ebf6;
   }
 }
 
+@keyframes scale {
+  0% {
+    transform: scale(5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .containerr {
+    overflow-y: hidden;
+  }
+}
 
 
 @media (max-width: 420px) {
+
+  .seção {
+    overflow-y: auto;
+  }
+
   .sidebar li .tooltip {
     display: none;
   }
@@ -175,22 +210,22 @@ color: #f3ebf6;
   }
 
   .seção .circlee {
-    width: 340px;
+    display: none;
   }
 
   .content .textBox {
 
     position: absolute;
     top: 2px;
-    width: 80%;
-    margin-right: 20px;
+    width: 90%;
 
+    margin-left: 40px;
 
   }
 
   .content .textBox a {
 
-    margin-left: 85px;
+    margin-left: 100px;
 
 
   }
@@ -203,7 +238,7 @@ color: #f3ebf6;
   .content .imgBox {
     position: absolute;
     top: 420px;
-    left: 2px;
+    left: 27px;
 
     width: 310px;
     height: 310px;
@@ -232,6 +267,16 @@ color: #f3ebf6;
     font-weight: 500;
 
 
+  }
+
+  .switch {
+    width: 50%;
+    display: flex;
+    margin-left: 75px;
+    margin-bottom: 10px;
+    gap: 20px;
+    align-items: center;
+    transform: translatey(450px)
   }
 
 

@@ -31,7 +31,7 @@ input {
 	height: 100vh;
 	position: relative;
 	color: var(--light);
-	
+
 
 	transition: width ease-in-out .6s;
 }
@@ -184,17 +184,18 @@ input {
 	transition: all 0.4s ease;
 	gap: 15px;
 	padding: 5px;
-	
+
 
 }
 
 .menu-item-NX {
 
 	height: 57px;
-	
+
 }
 
 .menu-item:hover {
+	cursor: pointer;
 	background-color: var(--light);
 	padding-left: 10px;
 }
@@ -308,6 +309,14 @@ input {
 	transition: all 0.5s ease;
 }
 
+@media (max-width: 1024px) {
+	.side-nav-container {
+		position: fixed;
+		z-index: 900;
+	}
+
+}
+
 @media (max-width: 720px) {
 	.side-nav-container {
 		position: fixed;
@@ -323,6 +332,10 @@ input {
 
 	.side-nav-container-NX {
 		width: 0;
+	}
+
+	.side-nav-container {
+		position: fixed;
 	}
 
 	.side-nav-container-NX .nav-upper .nav-menu,

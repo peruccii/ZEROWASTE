@@ -31,13 +31,15 @@
     "react-imask": "^6.0.3",
     "react-input-mask": "^2.0.4",
     "react-multi-select-component": "^4.3.4",
+    "react-particles": "^2.9.3",
     "react-router-dom": "^6.8.2",
     "react-select": "^5.7.0",
     "react-switch": "^7.0.0",
     "react-switch-selector": "^2.2.1",
     "react-transition-group": "^4.4.5",
     "reactstrap": "^9.1.6",
-    "styled-components": "^5.3.8"
+    "styled-components": "^5.3.8",
+    "tsparticles": "^2.9.3"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
