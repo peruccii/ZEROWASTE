@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import MenuLateral from './components/MenuLateral'
 import HomePage from './components/HomePage'
 import './styles/main.css'
-import Particles from 'react-particles'
+
 
 
 

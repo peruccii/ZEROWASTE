@@ -125,12 +125,28 @@
 
 figure img {
     border-radius: 50%;
+    border: red 5px solid;
+    
+}
+
+.statusCliente{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .userProfile {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .userDetails,
@@ -221,6 +237,41 @@ figure img {
     color: var(--f6-color);
 }
 
+.userDetails .btns ul li a{
+
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #fff;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #77dd77;
+  background-image: linear-gradient(45deg, #32cd32 0%, #77dd77  51%, #32cd32  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.userDetails .btns ul li a:hover {
+  background-position: right center;
+  
+  color: #fff;
+  text-decoration: none;
+}
+
+.userDetails .btns ul li a:active {
+  transform: scale(0.95);
+}
+
+
 .userDetails .btns ul,
 .userDetails .btns ul li {
     display: flex;
@@ -238,24 +289,12 @@ figure img {
 }
 
 .userDetails .btns ul li a {
-    font-size: var(--l-fs);
-    color: #fff;
-    font-weight: 400;
-    background: rgba(102, 163, 102, 0.433);
-    padding: var(--p-0-5) var(--p-1-5);
-    border-radius: 30px;
-    border: 2px solid rgb(0, 86, 1);
-    transition: all ease-in-out .5s;
+  
 }
 
 
 
-.userDetails .btns ul li a:hover {
-    color: #fff;
-    font-weight: 450;
-    background: rgb(51, 103, 51);
-    box-shadow: 34.495px 49.0927px 94px rgba(0, 0, 0, 0.14), 17.4631px 24.8532px 40.9781px rgba(0, 0, 0, 0.0945), 6.899px 9.81854px 15.275px rgba(0, 0, 0, 0.07), 1.50916px 2.14781px 5.43437px rgba(0, 0, 0, 0.0455);
-}
+
 
 
 

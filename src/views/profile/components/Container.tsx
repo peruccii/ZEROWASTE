@@ -84,8 +84,10 @@ const Container = () => {
         <div className='container-bio'>
             <section className="userProfile card">
                 <div className="profile">
-                    <figure><img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="profile"
-                        width="250px" height="250px" /></figure>
+                    <figure><img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="profile" width="250px" height="250px"/>
+                    <h1 className='statusCliente'>Status: Indisponivel</h1>
+                    </figure>
+                        
                 </div>
             </section>
 
@@ -130,7 +132,7 @@ const Container = () => {
                         <li className="sendMsg">
                             <a href="#">Solicite uma coleta</a>
                         </li>
-                        <li className="sendMsg active">
+                        <li className="sendMsgC active">
                             <a href="#">Contatos</a>
                         </li>
                         <li className="sendMsg">
