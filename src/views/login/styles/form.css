@@ -73,6 +73,23 @@ form.sign-in-form {
     font-weight: 500;
 }
 
+@media(max-width: 1024px) {
+    .container {
+        overflow: auto;
+    }
+
+    .divbotao {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .divbotao input {
+        width: 50%;
+        font-size: 10px;
+    }
+}
+
 @media (max-width: 570px) {
     form {
         padding: 0 1.5rem;

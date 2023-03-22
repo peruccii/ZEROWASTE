@@ -10,6 +10,9 @@ import Home from './home/Home'
 import Profile from './profile/Profile'
 import Cadastro from './cadastro/Cadastro'
 import Solicite from './solicite/Solicite'
+import Dicas from './dicas/Dicas'
+import CatadoresProximos from './catadoresProximos/components/CatadoresProximos'
+import CatadorePro from './catadoresProximos/CatadorePro'
 
 
 const Routess = () => {
@@ -41,6 +44,18 @@ const Routess = () => {
         <Route path='/solicite' element={
           //<ProtectedRoutes>
           <Solicite />
+          //</ProtectedRoutes>
+        } />
+
+        <Route path='/dicas' element={
+          //<ProtectedRoutes>
+          <Dicas />
+          //</ProtectedRoutes>
+        } />
+
+        <Route path='/catadores_proximos' element={
+          //<ProtectedRoutes>
+          <CatadorePro />
           //</ProtectedRoutes>
         } />
 

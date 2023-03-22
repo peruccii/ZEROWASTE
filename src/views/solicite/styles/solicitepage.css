@@ -151,6 +151,9 @@ form .input-groupp button {
     color: white;
     cursor: pointer;
     font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 form .input-groupp button:hover {

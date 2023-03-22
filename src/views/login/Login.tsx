@@ -42,9 +42,11 @@ const Login = () => {
 
   const signInVariants = {
     hidden: {
+      display: 'none',
       opacity: 0
     },
     visible: {
+      display: 'block',
       opacity: 1,
       transition: {
         delay: 0.5
@@ -53,9 +55,11 @@ const Login = () => {
   }
   const signUpVariants = {
     hidden: {
+      display: 'none',
       opacity: 0
     },
     visible: {
+      display: 'block',
       opacity: 1,
       transition: {
         delay: 0.5
@@ -66,9 +70,11 @@ const Login = () => {
 
   const signInContainerVariants = {
     hidden: {
+
       opacity: 0
     },
     visible: {
+
       opacity: 1,
       transition: {
         delay: 0.2
