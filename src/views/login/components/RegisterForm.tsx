@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Select from "react-select";
 import InputMask from "react-input-mask";
 import { IMaskInput } from "react-imask";
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 type dados = {
     email: string,
@@ -42,6 +44,8 @@ type drop = {
 
 
 function RegisterForm() {
+
+    const navigate = useNavigate()
 
     const [dropOptions, setDropOptions] = useState([])
 
@@ -128,7 +132,7 @@ function RegisterForm() {
     const handleChangeSenha = (event: ChangeEvent<HTMLInputElement>): void => {
         setSenha(event.target.value)
     }
-    
+
     const onChange = (newValue: any) => {
         setCpfCnpj(newValue)
         setMaskState(newValue == 'CNPJ' ? '99.999.999/9999-99' : '999.999.999-99')
@@ -195,7 +199,12 @@ function RegisterForm() {
         console.log(cadastroa);
 
         if (cadastro.ok) {
-            alert('Item criado com sucesso')
+            Swal.fire(
+                'Tudo certo!!',
+                'Conta criada com sucesso',
+                'success'
+            )
+            navigate('/', { replace: true })
             setNome('')
             setCep('')
             setComplemento('')
@@ -206,7 +215,11 @@ function RegisterForm() {
             setSenha('')
             setTelefone('')
         } else {
-            alert('Algo deu errado!')
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+            })
         }
     }
 
@@ -253,8 +266,6 @@ function RegisterForm() {
             <div className="input-field" id="adicionar_CPFCNPJ">
                 <i id="icone_cpfcnpj"><FontAwesomeIcon icon={faFile} /></i>
                 <InputMask placeholder={cpfCnpj} value={cpfValue} onChange={handleChangeCpf} mask={maskState} maskChar={null} />
-                {/* <input onChange={handleChangeCpf} value={cpfValue} type="text" placeholder={cpfCnpj} id="text_cpfcnpj" */}
-
             </div>
 
             <div className="input-field">
@@ -268,7 +279,6 @@ function RegisterForm() {
             <div className="input-field">
                 <i><FontAwesomeIcon icon={faLocationDot} /></i>
                 <InputMask mask="99999-999" maskChar={null} onChange={handleChangeCep} value={cep} placeholder="CEP" required />
-                {/* <input onChange={handleChangeCep} value={cep} type="number" id="cep" placeholder="CEP" required /> */}
                 <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank"
                     className="consultacep">Consultar CEP</a>
             </div>

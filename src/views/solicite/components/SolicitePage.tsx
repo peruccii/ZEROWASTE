@@ -25,27 +25,24 @@ const SolicitePage = () => {
 
 
 
-  return (
-    <div className="bdd">
-    <div className="boxx">
-        <div className="img-boxx">
-            <img src={celular} />
-        </div>
-        <div className="form-boxx">
-            <h2>Solicite uma coleta</h2>
-            <p>Formulario para solicitacao de uma coleta</p>
-            <form  action="#" className='form-solicite'>
-                <div className="input-groupp">
-                    <input   type="text" id="localizacao" placeholder="Localizaçao" required />
+    return (
+        <div className="bdd">
+            <div className="boxx">
+                <div className="img-boxx">
+                    <img src={celular} />
                 </div>
+                <div className="form-boxx">
+                    <h2>Solicite uma coleta</h2>
+                    <p>Formulario para solicitacao de uma coleta</p>
+                    <form action="#" className='form-solicite'>
+                        <div className="input-groupp">
+                            <input type="text" id="localizacao" placeholder="Localizaçao" required />
+                        </div>
 
-                <div className="input-groupp w50">
-
-                    <input  type="text" id="cidade" placeholder="Cidade" required />
-                </div>
 
 
-                {/* <div className='drop' style={{ width: 375, height: 50, borderRadius: 100}}>
+
+                        {/* <div className='drop' style={{ width: 375, height: 50, borderRadius: 100}}>
                     <Select
                         defaultValue={[dropOptions[2]]}
                         isMulti
@@ -60,16 +57,16 @@ const SolicitePage = () => {
 
 
 
-                <div className="input-groupp w50">
-                    <button type='submit'>Cadastrar</button>
+                        <div className="input-groupp w50">
+                            <button type='submit'>Solicite</button>
+                        </div>
+
+
+                    </form>
                 </div>
-
-
-            </form>
+            </div>
         </div>
-    </div>
-</div>
-  )
+    )
 }
 
 export default SolicitePage

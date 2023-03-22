@@ -29,7 +29,7 @@ const MenuLateral = () => {
         {
             text: localStorage.getItem('tipo') == "Catador" ? 'Coletas' : "Mapa de catadores proximos",
             icon: <FontAwesomeIcon className='icon' icon={faMapPin} />,
-            href: '/'
+            href: localStorage.getItem('tipo') == "Catador" ? '/' : "/catadores_proximos"
         },
         {
             text: "Pontuação",
@@ -39,7 +39,7 @@ const MenuLateral = () => {
         {
             text: "Dicas",
             icon: <FontAwesomeIcon className='icon' icon={faBook} />,
-            href: '/'
+            href: '/dicas'
         }
 
 
