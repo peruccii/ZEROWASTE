@@ -1,38 +1,38 @@
-import React from 'react'
+import React , {useState} from 'react'
 import '../style.css'
 import catadores_proximosfoto from '../../../assets/catadores_proximosfoto.png'
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import DropDownOptions from './DropwDownOptions';
+import DropwDownOptions from './DropwDownOptions'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
+import { Dropdown } from 'rsuite';
+
+
 
 const CatadoresProximos = () => {
+
+    const [selected, setSelected] = useState("")
+
+
     return (
-        <body>
-
-            <form action="" className="search-bar">
-                <input type="search" name="search" pattern=".*\S.*" required />
-                <button className="search-btn" type="submit">
-                    <span>Search</span>
-                </button>
-            </form>
-
+        <div>
+            <div className="search-box">
+            <input className="search-txt" type="text" name="" placeholder="Procure por nome ou endereço"/>
+            <a className="search-btn">
+            <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#ffffff",}} />
+                </a>
+            </div>
             <div className='scroll'>
                 <div className='infoS'>
                     <h1 className='titleBoxU'>Catadores proximos</h1>
 
                     <div className='reg-bt'>
-                        <h2>regiao</h2>
-
-                        <DropDownOptions />
+                        <DropwDownOptions selected={selected} setSelected={setSelected} />
                     </div>
-
-
-
                 </div>
                 <div className="boxUserProximos">
                     <img src={catadores_proximosfoto} alt="photo" />
                     <div className='boxInfoU'>
-                        <h3>Eduardo</h3>
+                        <h3>Eduardo Perucci Martins de Souza</h3>
                         <p>Jandira</p>
                     </div>
                     <div className='buttonPosition'>
@@ -45,7 +45,7 @@ const CatadoresProximos = () => {
                 <div className="boxUserProximos">
                     <img src={catadores_proximosfoto} alt="photo" />
                     <div className='boxInfoU'>
-                        <h3>Eduardo</h3>
+                        <h3>Lidia Galdiano</h3>
                         <p>Jandira</p>
                     </div>
                     <div className='buttonPosition'>
@@ -56,7 +56,7 @@ const CatadoresProximos = () => {
                 <div className="boxUserProximos">
                     <img src={catadores_proximosfoto} alt="photo" />
                     <div className='boxInfoU'>
-                        <h3>Eduardo</h3>
+                        <h3>Miguel</h3>
                         <p>Jandira</p>
                     </div>
                     <div className='buttonPosition'>
@@ -67,7 +67,7 @@ const CatadoresProximos = () => {
                 <div className="boxUserProximos">
                     <img src={catadores_proximosfoto} alt="photo" />
                     <div className='boxInfoU'>
-                        <h3>Eduardo</h3>
+                        <h3>Larissa</h3>
                         <p>Jandira</p>
                     </div>
                     <div className='buttonPosition'>
@@ -78,7 +78,7 @@ const CatadoresProximos = () => {
                 <div className="boxUserProximos">
                     <img src={catadores_proximosfoto} alt="photo" />
                     <div className='boxInfoU'>
-                        <h3>Eduardo</h3>
+                        <h3>Ana</h3>
                         <p>Jandira</p>
                     </div>
                     <div className='buttonPosition'>
@@ -155,7 +155,7 @@ const CatadoresProximos = () => {
 
 
 
-        </body>
+        </div>
     )
 }
 

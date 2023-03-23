@@ -1,18 +1,32 @@
 import React from 'react'
-import { Dropdown } from 'semantic-ui-react'
+import { useState } from "react"
+ 
+function DropwDownOptions ({selected, setSelected}) {
 
-const options = [
-    { key: 1, text: 'Jandira', value: 1 },
-    { key: 2, text: 'Barueri', value: 2 },
-    { key: 3, text: 'Itapevi', value: 3 },
-]
+    const [isActive, setIsActive] = useState(false)
+    const options = ['Barueri', 'Jandira', 'Itapevi', 'Osasco', 'Carapicuiba']
 
-const DropDownOptions = () => {
     return (
-        <Dropdown clearable options={options} selection />
+        <div className="dropdown">
+             <div className="dropdown-btn" onClick={(e) => 
+                setIsActive(!isActive)}>
+                    Região: {selected}
+             </div>
+                {isActive && (
+                   <div className="dropdown-content">
+                    {options.map((option) => (
+                        <div onClick={(e) => {
+                        setSelected(option)
+                        setIsActive(false)
+                        }}
+                        className="dropdown-item">
+                        {option}
+                        </div>
+                    ))}
+                </div>
+            )} 
+        </div>
     )
-
 }
 
-export default DropDownOptions
-
+export default DropwDownOptions
